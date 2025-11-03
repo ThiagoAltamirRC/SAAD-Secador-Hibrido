@@ -2,6 +2,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Vencedor-1%C2%BA%20Lugar%20CONBEA%202023-blue?style=for-the-badge&logo=award&labelColor=gold" alt="Projeto Vencedor no CONBEA 2023">
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/Tecnologia-IoT%20e%20Data%20Acquisition-red?style=for-the-badge&logo=iot-edge&logoColor=white" alt="IoT e Data Acquisition">
 </p>
 
