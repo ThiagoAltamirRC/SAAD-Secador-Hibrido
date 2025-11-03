@@ -56,9 +56,10 @@ Este projeto foi uma experiência intensiva nas seguintes áreas, cruciais para 
 ## 🔗 Código Fonte e Artigo Científico
 
 * **Repositório do Firmware:** [Link para o repositório do seu código C/C++ do ESP32]
-* **Artigo Completo (PDF):** <a 
-        href="  https://github.com/ThiagoAltamirRC/SAAD-Secador-Hibrido/blob/main/docs/Coutinho_et_al_2023.pdf">
+* **Artigo Completo (PDF):**
+<a 
+    href="https://github.com/ThiagoAltamirRC/SAAD-Secador-Hibrido/blob/main/docs/Coutinho_et_al_2023.pdf">
         SAAD-Secador-Hibrido
-    </a>      
+</a>      
 
 ---
