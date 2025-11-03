@@ -2,47 +2,58 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Vencedor-1%C2%BA%20Lugar%20CONBEA%202023-blue?style=for-the-badge&logo=award&labelColor=gold" alt="Projeto Vencedor no CONBEA 2023">
+  <img src="https://img.shields.io/badge/Tecnologia-IoT%20e%20Data%20Acquisition-red?style=for-the-badge&logo=iot-edge&logoColor=white" alt="IoT e Data Acquisition">
 </p>
 
-## 💡 Sobre o Projeto
+## 💡 Resumo Executivo e Impacto
 
-[cite_start]Este projeto consiste no desenvolvimento e validação de um **Sistema de Aquisição Automática de Dados (SAAD)** [cite: 6] [cite_start]para monitorar em tempo real [cite: 40] [cite_start]os parâmetros críticos (temperatura e umidade relativa do ar [cite: 17, 39][cite_start]) de um Secador Híbrido Solar-Elétrico (SHSE)[cite: 6, 7].
+Este projeto de **Internet das Coisas (IoT)** e **Automação** visa mitigar o desperdício de produtos agrícolas (um gargalo da agricultura brasileira) através da otimização do processo de secagem.
 
-[cite_start]A automação do monitoramento é vital para garantir a qualidade e a vida útil do produto final agrícola [cite: 39] [cite_start]e mitigar perdas[cite: 35]. [cite_start]O projeto foi apresentado no **LII Congresso Brasileiro de Engenharia Agrícola (CONBEA) em 2023**[cite: 2, 3].
+Desenvolvemos um **Sistema de Aquisição Automática de Dados (SAAD)** para monitorar em tempo real a **temperatura** e **umidade relativa do ar** dentro de um Secador Híbrido Solar-Elétrico (SHSE). O sistema garante o monitoramento contínuo e a coleta de dados, que são cruciais para a conservação e qualidade do produto final.
 
-## 🛠️ Stack de Tecnologia e Arquitetura de Software
+* **Validação:** O trabalho foi validado com sucesso e apresentado no **LII Congresso Brasileiro de Engenharia Agrícola (CONBEA 2023)**.
 
-Este projeto demonstrou proficiência em integração de hardware, redes, banco de dados e desenvolvimento de aplicações móveis (Low-Code/No-Code).
+## ⚙️ Arquitetura e Stack de Tecnologia
 
-### Componentes Chave
+A solução é baseada em uma arquitetura de nuvem (Cloud-Based) e embarcados (Embedded Systems), demonstrando a integração completa entre hardware, firmware e serviços web.
 
-| Categoria | Tecnologia | Função no Sistema | Palavra-chave para Recrutadores |
-| :--- | :--- | :--- | :--- |
-| **Microcontrolador** | [cite_start]**ESP32** [cite: 19, 27] | [cite_start]Coleta de dados e conexão Wi-Fi com o Banco de Dados[cite: 50]. | C/C++, IoT, Redes, Firmware |
-| **Sensores** | [cite_start]**DHT22** (12 unidades) [cite: 47] | [cite_start]Medição de Temperatura e Umidade Relativa do Ar[cite: 47]. | Lógica de Programação, Depuração (Debugging) |
-| **Banco de Dados (Back-end)** | [cite_start]**Google Firebase** [cite: 50, 53] | [cite_start]Armazenamento temporário (Realtime Database) [cite: 51] [cite_start]e permanente (Firestore Database) [cite: 53] dos dados coletados. | Cloud Computing, NoSQL, APIs de Serviço |
-| **Aplicação (Front-end)** | [cite_start]**GERAR Mobile App 2.0** [cite: 19, 23, 56] | [cite_start]Aplicativo desenvolvido na plataforma **AppGyver** [cite: 56] [cite_start]para monitoramento remoto em tempo real [cite: 41, 40][cite_start], com tela de login e informações do exaustor[cite: 58]. | Low-Code/No-Code, UI/UX, Telas de Login/Autenticação |
+### 1. Embedded Software (Firmware)
 
-### Fluxo de Dados e Comunicação
+* **Linguagem Principal:** C/C++ (Programação de baixo nível).
+* **Microcontrolador:** **ESP32** (Utilizado por sua capacidade de processamento dual-core e conectividade Wi-Fi).
+* **Ação:** O ESP32 realiza a leitura de **12 sensores DHT22** (Temperatura e Umidade Relativa) distribuídos em três pontos críticos do secador (entrada, saída do coletor solar e câmara de secagem).
 
-[cite_start]O SAAD opera em um ciclo robusto de aquisição e transmissão[cite: 52]:
+### 2. Comunicação e Back-end (Cloud Services)
 
-1.  [cite_start]O **ESP32** [cite: 48] [cite_start]coleta os dados de **12 sensores DHT22** distribuídos no secador[cite: 47, 49].
-2.  [cite_start]A cada minuto [cite: 51][cite_start], o microcontrolador se conecta via **Wi-Fi** para enviar os dados ao **Realtime Database do Firebase**[cite: 50, 51].
-3.  [cite_start]O **GERAR Mobile App 2.0** compila os dados do Realtime Database a cada 10 minutos [cite: 53] [cite_start]e os armazena permanentemente no **Firestore Database**[cite: 53].
+* **Protocolo de Transmissão:** O ESP32 utiliza a conectividade **Wi-Fi** para publicar os dados na nuvem.
+* **Banco de Dados (NoSQL/Cloud):** **Google Firebase**.
+    * **Firebase Realtime Database:** Utilizado para armazenamento temporário e de **baixa latência**, recebendo um fluxo de dados a cada **1 minuto**.
+    * **Firebase Firestore Database:** Utilizado para armazenamento **permanente** dos dados, após compilação a cada **10 minutos**, suportando análise posterior e gerenciamento de informações.
 
-## 🎯 Desafios de Engenharia de Software
+### 3. Front-end (Aplicação Móvel)
 
-O desenvolvimento deste sistema exigiu atenção a aspectos cruciais de engenharia:
+* **Plataforma de Desenvolvimento:** **AppGyver** (Utilizado para o desenvolvimento *Low-Code/No-Code*).
+* **Aplicação:** **GERAR Mobile App 2.0**.
+* **Funcionalidades:** Tela de **Login/Autenticação** de usuário, visualização em tempo real dos valores de temperatura e umidade, e estado operacional do exaustor.
 
-* **Otimização e Gerenciamento de Memória (C/C++):** Garantir o funcionamento eficiente do código do firmware no ambiente restrito do ESP32, lidando com múltiplas leituras de sensores e mantendo a conexão de rede.
-* [cite_start]**Confiabilidade de Dados e Redes:** Implementar a lógica de conexão e envio de dados a cada minuto [cite: 51][cite_start], garantindo a integridade dos dados coletados[cite: 54].
-* [cite_start]**Validação e Calibração:** O SAAD validou os dados comparando as leituras do DHT22 com equipamentos de precisão convencionais (termopares e termo-higrômetros), demonstrando boa correlação nas leituras de Entrada/Saída do coletor[cite: 21, 29, 63].
+## 🚧 Desafios Técnicos e Ganhos de Habilidade
 
-## 📂 Repositório e Próximos Passos
+Este projeto foi uma experiência intensiva nas seguintes áreas, cruciais para um Desenvolvedor Júnior:
 
-Este projeto valida minha competência na união de **Programação de Baixo Nível (`C/C++`)**, **Protocolos de Comunicação (`Wi-Fi`)** e **Serviços de Nuvem (`Firebase`)** para a criação de soluções robustas.
+### 1. Desenvolvimento de Firmware e Otimização
+* **Gerenciamento de Recursos:** Programação em C/C++ em um ambiente com recursos limitados de RAM e flash, exigindo código limpo e otimizado.
+* **Handling de Sensores:** Implementação da lógica para a leitura estável e precisa de 12 sensores DHT22 simultaneamente.
 
-* [cite_start]**Próximos Passos:** Melhorar a metodologia de coleta de dados no ponto da câmara de secagem [cite: 93] e explorar a implementação do sistema em plataformas de desenvolvimento Web (ex: *React/Next.js* ou *Python/Django*) para criar um dashboard de monitoramento mais robusto.
+### 2. Integração de Redes e Protocolos
+* **Conectividade Wi-Fi:** Estabelecimento e manutenção da conexão Wi-Fi do ESP32 para garantir o envio contínuo dos dados para a nuvem.
+* **Integração Firebase:** Uso da API do Google Firebase (serviço de back-end como serviço - BaaS) para autenticação e manipulação do Realtime Database e Firestore.
+
+### 3. Validação e Confiabilidade
+* **Controle de Qualidade de Dados:** O sistema de validação comparou as leituras do SAAD (DHT22) com instrumentos de precisão (termopares e termo-higrômetros), garantindo a **fidelidade** e **confiabilidade** dos dados coletados para fins de pesquisa e aplicação prática.
+
+## 🔗 Código Fonte e Artigo Científico
+
+* **Repositório do Firmware:** [Link para o repositório do seu código C/C++ do ESP32]
+* **Artigo Completo (PDF):** [Link direto para o PDF do Artigo Científico]
 
 ---
