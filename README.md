@@ -28,7 +28,7 @@ Este projeto de **Internet das Coisas (IoT)** e **Automação** visa mitigar o d
 
 Desenvolvemos um **Sistema de Aquisição Automática de Dados (SAAD)** para monitorar em tempo real a **temperatura** e **umidade relativa do ar** dentro de um Secador Híbrido Solar-Elétrico (SHSE). O sistema garante o monitoramento contínuo e a coleta de dados, que são cruciais para a conservação e qualidade do produto final.
 
-* **Validação:** O trabalho foi validado com sucesso e apresentado no **LII Congresso Brasileiro de Engenharia Agrícola (CONBEA 2023)**.
+* **Validação:** O trabalho foi validado com sucesso e apresentado no **LII Congresso Brasileiro de Engenharia Agrícola (CONBEA 2023)**. Além disso, recebeu **Menção Honrosa** por sua classificação em **1º LUGAR 🥇**.
 
 ## ⚙️ Arquitetura e Stack de Tecnologia
 
