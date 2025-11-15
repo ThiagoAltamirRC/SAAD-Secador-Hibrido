@@ -15,6 +15,13 @@
   <img src="https://img.shields.io/badge/Tecnologia-IoT%20e%20Data%20Acquisition-red?style=for-the-badge&logo=iot-edge&logoColor=white" alt="IoT e Data Acquisition">
 </p>
 
+<p align="center">
+<img 
+    src="./assets/SECADOR SOLAR-HIBRIDO APK.png"
+    width="500"
+/>
+</p>
+
 ## 💡 Resumo Executivo e Impacto
 
 Este projeto de **Internet das Coisas (IoT)** e **Automação** visa mitigar o desperdício de produtos agrícolas (um gargalo da agricultura brasileira) através da otimização do processo de secagem.
