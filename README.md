@@ -55,7 +55,7 @@ A solução é baseada em uma arquitetura de nuvem (Cloud-Based) e embarcados (E
 
 ## 🚧 Desafios Técnicos e Ganhos de Habilidade
 
-Este projeto foi uma experiência intensiva nas seguintes áreas, cruciais para um Desenvolvedor Júnior:
+Este projeto foi uma experiência intensiva nas seguintes áreas, cruciais para um Desenvolvedor:
 
 ### 1. Desenvolvimento de Firmware e Otimização
 * **Gerenciamento de Recursos:** Programação em C/C++ em um ambiente com recursos limitados de RAM e flash, exigindo código limpo e otimizado.
